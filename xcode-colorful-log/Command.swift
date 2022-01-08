@@ -12,7 +12,7 @@ protocol CommandProtocol {
 }
 
 protocol CommandDelegate: AnyObject {
-    func command(_ message: String)
+    func command(_ message: String, filterKey: String)
 }
 
 class Command: CommandProtocol {
@@ -21,7 +21,7 @@ class Command: CommandProtocol {
     private let pipe = Pipe()
     private let launchPath = "/usr/bin/env"
     private let arguments: [String] = ["bash", "-c"]
-    private let command: String = "log stream --debug --info"
+    private let command: String = "log stream --info"
     
     private var handler: FileHandle!
     private var key: String!
@@ -48,7 +48,7 @@ class Command: CommandProtocol {
             guard let line = String(data: pipe.availableData, encoding: .utf8) else { return }
             guard line.contains(self.key) else { return }
             
-            self.delegate?.command(line)
+            self.delegate?.command(line, filterKey: self.key)
         }
         
         process.launch()

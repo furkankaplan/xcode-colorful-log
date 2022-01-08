@@ -28,8 +28,10 @@ class Run: RunProtocol {
 
 extension Run: CommandDelegate {
     
-    func command(_ message: String) {
-        print(message)
+    func command(_ message: String, filterKey: String) {
+        let parser: ParseProtocol = Parse(messages: [message], filterKey: filterKey)
+        parser.checkIfMultiline()
+        parser.parse()
     }
     
 }

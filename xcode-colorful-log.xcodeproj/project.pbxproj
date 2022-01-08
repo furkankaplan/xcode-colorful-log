@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B6197DF72789CE64000DEE77 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6197DF62789CE64000DEE77 /* Parse.swift */; };
+		B6197DFA2789D655000DEE77 /* LogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6197DF92789D655000DEE77 /* LogEntry.swift */; };
+		B6197DFC2789D67D000DEE77 /* LogType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6197DFB2789D67D000DEE77 /* LogType.swift */; };
+		B6197DFF2789D719000DEE77 /* DateCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6197DFE2789D719000DEE77 /* DateCreator.swift */; };
 		B65D821C2789B13500BBCDB1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D821B2789B13500BBCDB1 /* main.swift */; };
 		B65D82252789BB5F00BBCDB1 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D82242789BB5F00BBCDB1 /* Command.swift */; };
 		B65D82272789C6D100BBCDB1 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D82262789C6D100BBCDB1 /* Run.swift */; };
@@ -25,6 +29,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B6197DF62789CE64000DEE77 /* Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parse.swift; sourceTree = "<group>"; };
+		B6197DF92789D655000DEE77 /* LogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntry.swift; sourceTree = "<group>"; };
+		B6197DFB2789D67D000DEE77 /* LogType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogType.swift; sourceTree = "<group>"; };
+		B6197DFE2789D719000DEE77 /* DateCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCreator.swift; sourceTree = "<group>"; };
 		B65D82182789B13500BBCDB1 /* xcode-colorful-log */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "xcode-colorful-log"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65D821B2789B13500BBCDB1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B65D82242789BB5F00BBCDB1 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
@@ -42,6 +50,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B6197DF82789D63E000DEE77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B6197DF92789D655000DEE77 /* LogEntry.swift */,
+				B6197DFB2789D67D000DEE77 /* LogType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B6197DFD2789D6FD000DEE77 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B6197DFE2789D719000DEE77 /* DateCreator.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		B65D820F2789B13500BBCDB1 = {
 			isa = PBXGroup;
 			children = (
@@ -61,9 +86,12 @@
 		B65D821A2789B13500BBCDB1 /* xcode-colorful-log */ = {
 			isa = PBXGroup;
 			children = (
+				B6197DFD2789D6FD000DEE77 /* Manager */,
+				B6197DF82789D63E000DEE77 /* Model */,
 				B65D821B2789B13500BBCDB1 /* main.swift */,
 				B65D82242789BB5F00BBCDB1 /* Command.swift */,
 				B65D82262789C6D100BBCDB1 /* Run.swift */,
+				B6197DF62789CE64000DEE77 /* Parse.swift */,
 			);
 			path = "xcode-colorful-log";
 			sourceTree = "<group>";
@@ -127,8 +155,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B65D82272789C6D100BBCDB1 /* Run.swift in Sources */,
+				B6197DF72789CE64000DEE77 /* Parse.swift in Sources */,
+				B6197DFC2789D67D000DEE77 /* LogType.swift in Sources */,
 				B65D821C2789B13500BBCDB1 /* main.swift in Sources */,
+				B6197DFF2789D719000DEE77 /* DateCreator.swift in Sources */,
 				B65D82252789BB5F00BBCDB1 /* Command.swift in Sources */,
+				B6197DFA2789D655000DEE77 /* LogEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
