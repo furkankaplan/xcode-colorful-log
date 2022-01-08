@@ -7,5 +7,5 @@
 
 import Foundation
 
-print("Hello, World!")
-
+let result: RunProtocol = Run(key: "Crypto.ContactsApp1:ContactsApp")
+result.log()
