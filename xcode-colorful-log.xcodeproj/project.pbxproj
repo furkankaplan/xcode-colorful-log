@@ -14,6 +14,9 @@
 		B65D821C2789B13500BBCDB1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D821B2789B13500BBCDB1 /* main.swift */; };
 		B65D82252789BB5F00BBCDB1 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D82242789BB5F00BBCDB1 /* Command.swift */; };
 		B65D82272789C6D100BBCDB1 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D82262789C6D100BBCDB1 /* Run.swift */; };
+		B6666B45278A3A7B0048AA81 /* Painter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6666B44278A3A7B0048AA81 /* Painter.swift */; };
+		B6666B47278A3C7B0048AA81 /* ANSIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6666B46278A3C7B0048AA81 /* ANSIColor.swift */; };
+		B6666B4A278A3D030048AA81 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6666B49278A3D030048AA81 /* String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +40,9 @@
 		B65D821B2789B13500BBCDB1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B65D82242789BB5F00BBCDB1 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		B65D82262789C6D100BBCDB1 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		B6666B44278A3A7B0048AA81 /* Painter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painter.swift; sourceTree = "<group>"; };
+		B6666B46278A3C7B0048AA81 /* ANSIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANSIColor.swift; sourceTree = "<group>"; };
+		B6666B49278A3D030048AA81 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				B6197DFE2789D719000DEE77 /* DateCreator.swift */,
+				B6666B46278A3C7B0048AA81 /* ANSIColor.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -86,14 +93,24 @@
 		B65D821A2789B13500BBCDB1 /* xcode-colorful-log */ = {
 			isa = PBXGroup;
 			children = (
+				B65D821B2789B13500BBCDB1 /* main.swift */,
+				B6666B48278A3CF40048AA81 /* Extension */,
 				B6197DFD2789D6FD000DEE77 /* Manager */,
 				B6197DF82789D63E000DEE77 /* Model */,
-				B65D821B2789B13500BBCDB1 /* main.swift */,
 				B65D82242789BB5F00BBCDB1 /* Command.swift */,
 				B65D82262789C6D100BBCDB1 /* Run.swift */,
 				B6197DF62789CE64000DEE77 /* Parse.swift */,
+				B6666B44278A3A7B0048AA81 /* Painter.swift */,
 			);
 			path = "xcode-colorful-log";
+			sourceTree = "<group>";
+		};
+		B6666B48278A3CF40048AA81 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				B6666B49278A3D030048AA81 /* String.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,7 +173,10 @@
 			files = (
 				B65D82272789C6D100BBCDB1 /* Run.swift in Sources */,
 				B6197DF72789CE64000DEE77 /* Parse.swift in Sources */,
+				B6666B4A278A3D030048AA81 /* String.swift in Sources */,
+				B6666B47278A3C7B0048AA81 /* ANSIColor.swift in Sources */,
 				B6197DFC2789D67D000DEE77 /* LogType.swift in Sources */,
+				B6666B45278A3A7B0048AA81 /* Painter.swift in Sources */,
 				B65D821C2789B13500BBCDB1 /* main.swift in Sources */,
 				B6197DFF2789D719000DEE77 /* DateCreator.swift in Sources */,
 				B65D82252789BB5F00BBCDB1 /* Command.swift in Sources */,

@@ -13,15 +13,21 @@ protocol ParseProtocol {
     func parse()
 }
 
+protocol ParseDelegate: AnyObject {
+    func parse(received log: LogEntry)
+}
+
 class Parse: ParseProtocol {
     
     private var messages: [String]
     private var dateCreater: DateCreatorProtocol = DateCreator()
     private var filterKey: String
+    private weak var delegate: ParseDelegate?
     
-    init(messages: [String], filterKey: String) {
+    init(messages: [String], filterKey: String, delegate: ParseDelegate) {
         self.messages = messages
         self.filterKey = filterKey
+        self.delegate = delegate
     }
     
     func checkIfMultiline() {
@@ -53,7 +59,7 @@ class Parse: ParseProtocol {
                 category: splitted[8],
                 message: splitted[9])
             
-            print(model)
+            self.delegate?.parse(received: model)
         }
     }
         

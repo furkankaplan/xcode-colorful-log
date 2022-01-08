@@ -29,9 +29,18 @@ class Run: RunProtocol {
 extension Run: CommandDelegate {
     
     func command(_ message: String, filterKey: String) {
-        let parser: ParseProtocol = Parse(messages: [message], filterKey: filterKey)
+        let parser: ParseProtocol = Parse(messages: [message], filterKey: filterKey, delegate: self)
         parser.checkIfMultiline()
         parser.parse()
+    }
+    
+}
+
+extension Run: ParseDelegate {
+    
+    func parse(received log: LogEntry) {
+        let painter = Painter(log: log)
+        painter.printLog()
     }
     
 }

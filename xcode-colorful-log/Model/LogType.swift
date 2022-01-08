@@ -7,9 +7,9 @@
 
 import Foundation
 
-enum LogType {
-    case error
-    case info
-    case`default`
-    case fault
+enum LogType: String {
+    case error = "Error"
+    case info = "Info"
+    case`default` = "Default"
+    case fault = "Fault"
 }
