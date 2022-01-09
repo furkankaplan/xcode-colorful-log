@@ -30,7 +30,6 @@ class Painter: PainterProtocol {
         case .info: color = .cyan
         }
         
-        // self.log.message.with(color: color)
         var message: String = ""
         
         message.append("[")

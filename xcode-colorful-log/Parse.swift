@@ -36,7 +36,6 @@ class Parse: ParseProtocol {
     
     func parse() {
         for message in messages {
-            
             let splitted = message.split(separator: " ").map { String($0) }
             
             guard splitted.count == 10 else { return }
