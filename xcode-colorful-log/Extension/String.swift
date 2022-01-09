@@ -13,4 +13,8 @@ extension String {
         return "\(color.value)\(self)"
     }
     
+    var escape: String {
+        return self.replacingOccurrences(of: "@new-line@", with: "\n").replacingOccurrences(of: "@space@", with: " ")
+    }
+    
 }
