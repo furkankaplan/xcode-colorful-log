@@ -14,21 +14,20 @@ protocol DateCreatorProtocol {
 
 class DateCreator: DateCreatorProtocol {
     
-    func createFrom(_ string: String) -> Date {
+    private var dateFormatter: DateFormatter {
         let dateFormatter = DateFormatter()
         
         dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
         
+        return dateFormatter
+    }
+    
+    func createFrom(_ string: String) -> Date {
         return dateFormatter.date(from:string) ?? Date()
     }
     
     func createFrom(_ date: Date) -> String {
-        let dateFormatter = DateFormatter()
-        
-        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        
         return dateFormatter.string(from: date)
     }
     
