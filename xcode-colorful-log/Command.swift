@@ -28,8 +28,6 @@ class Command: CommandProtocol {
     
     private weak var delegate: CommandDelegate!
     
-    private init() { /* Not Allowed */ }
-    
     init(key: String, delegate: CommandDelegate) {
         self.key = key
         
