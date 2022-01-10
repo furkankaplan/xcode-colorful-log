@@ -13,9 +13,9 @@ protocol Running {
 
 class Runner: Running {
     
-    private let injector: DependencyInjector
+    private let injector: DependencyInjecting
     
-    init(injector: DependencyInjector) {
+    init(injector: DependencyInjecting) {
         self.injector = injector
     }
     

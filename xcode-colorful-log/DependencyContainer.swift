@@ -7,13 +7,13 @@
 
 import Foundation
 
-protocol DependencyInjector {
+protocol DependencyInjecting {
     func command() -> Commanding
     func parser(_ message: String) -> Parsing
     func painter(_ log: LogEntry) -> Painting
 }
 
-class DependencyContainer: DependencyInjector {
+class DependencyContainer: DependencyInjecting {
     
     private let key: String
     
