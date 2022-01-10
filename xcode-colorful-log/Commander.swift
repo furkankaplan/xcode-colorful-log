@@ -1,5 +1,5 @@
 //
-//  Command.swift
+//  Commander.swift
 //  xcode-colorful-log
 //
 //  Created by Furkan Kaplan on 8.01.2022.
@@ -7,15 +7,16 @@
 
 import Foundation
 
-protocol CommandProtocol {
+protocol Commanding {
+    var delegate: CommanderDelegate? { get set }
     func run()
 }
 
-protocol CommandDelegate: AnyObject {
-    func command(_ message: String, filterKey: String)
+protocol CommanderDelegate: AnyObject {
+    func command(_ message: String)
 }
 
-class Command: CommandProtocol {
+class Commander: Commanding {
     
     private let process = Process()
     private let pipe = Pipe()
@@ -25,10 +26,10 @@ class Command: CommandProtocol {
     
     private var handler: FileHandle!
     private var key: String!
+
+    weak var delegate: CommanderDelegate?
     
-    private weak var delegate: CommandDelegate!
-    
-    init(key: String, delegate: CommandDelegate) {
+    init(key: String) {
         self.key = key
         
         self.process.launchPath = self.launchPath
@@ -36,8 +37,6 @@ class Command: CommandProtocol {
         self.process.standardOutput = pipe
         
         self.handler = pipe.fileHandleForReading
-        
-        self.delegate = delegate
     }
     
     func run() {
@@ -46,7 +45,7 @@ class Command: CommandProtocol {
             guard let line = String(data: pipe.availableData, encoding: .utf8) else { return }
             guard line.contains(self.key) else { return }
             
-            self.delegate?.command(line, filterKey: self.key)
+            self.delegate?.command(line)
         }
         
         process.launch()

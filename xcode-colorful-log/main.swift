@@ -7,5 +7,5 @@
 
 import Foundation
 
-let result: RunProtocol = Run(key: "Crypto.ContactsApp1:ContactsApp")
+let result: Running = Runner(injector: DependencyContainer(key: "Crypto.ContactsApp1:ContactsApp"))
 result.log()

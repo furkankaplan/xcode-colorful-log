@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B6197DF72789CE64000DEE77 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6197DF62789CE64000DEE77 /* Parse.swift */; };
+		B6197DF72789CE64000DEE77 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6197DF62789CE64000DEE77 /* Parser.swift */; };
 		B6197DFA2789D655000DEE77 /* LogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6197DF92789D655000DEE77 /* LogEntry.swift */; };
 		B6197DFC2789D67D000DEE77 /* LogType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6197DFB2789D67D000DEE77 /* LogType.swift */; };
 		B6197DFF2789D719000DEE77 /* DateCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6197DFE2789D719000DEE77 /* DateCreator.swift */; };
+		B625EE45278CC25D00A4EBB0 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B625EE44278CC25D00A4EBB0 /* DependencyContainer.swift */; };
 		B65D821C2789B13500BBCDB1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D821B2789B13500BBCDB1 /* main.swift */; };
-		B65D82252789BB5F00BBCDB1 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D82242789BB5F00BBCDB1 /* Command.swift */; };
-		B65D82272789C6D100BBCDB1 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D82262789C6D100BBCDB1 /* Run.swift */; };
+		B65D82252789BB5F00BBCDB1 /* Commander.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D82242789BB5F00BBCDB1 /* Commander.swift */; };
+		B65D82272789C6D100BBCDB1 /* Runner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D82262789C6D100BBCDB1 /* Runner.swift */; };
 		B6666B45278A3A7B0048AA81 /* Painter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6666B44278A3A7B0048AA81 /* Painter.swift */; };
 		B6666B47278A3C7B0048AA81 /* ANSIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6666B46278A3C7B0048AA81 /* ANSIColor.swift */; };
 		B6666B4A278A3D030048AA81 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6666B49278A3D030048AA81 /* String.swift */; };
@@ -32,14 +33,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		B6197DF62789CE64000DEE77 /* Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parse.swift; sourceTree = "<group>"; };
+		B6197DF62789CE64000DEE77 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		B6197DF92789D655000DEE77 /* LogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntry.swift; sourceTree = "<group>"; };
 		B6197DFB2789D67D000DEE77 /* LogType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogType.swift; sourceTree = "<group>"; };
 		B6197DFE2789D719000DEE77 /* DateCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateCreator.swift; sourceTree = "<group>"; };
+		B625EE44278CC25D00A4EBB0 /* DependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyContainer.swift; sourceTree = "<group>"; };
 		B65D82182789B13500BBCDB1 /* xcode-colorful-log */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "xcode-colorful-log"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B65D821B2789B13500BBCDB1 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		B65D82242789BB5F00BBCDB1 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
-		B65D82262789C6D100BBCDB1 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		B65D82242789BB5F00BBCDB1 /* Commander.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commander.swift; sourceTree = "<group>"; };
+		B65D82262789C6D100BBCDB1 /* Runner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Runner.swift; sourceTree = "<group>"; };
 		B6666B44278A3A7B0048AA81 /* Painter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painter.swift; sourceTree = "<group>"; };
 		B6666B46278A3C7B0048AA81 /* ANSIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANSIColor.swift; sourceTree = "<group>"; };
 		B6666B49278A3D030048AA81 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
@@ -97,10 +99,11 @@
 				B6666B48278A3CF40048AA81 /* Extension */,
 				B6197DFD2789D6FD000DEE77 /* Manager */,
 				B6197DF82789D63E000DEE77 /* Model */,
-				B65D82262789C6D100BBCDB1 /* Run.swift */,
-				B65D82242789BB5F00BBCDB1 /* Command.swift */,
-				B6197DF62789CE64000DEE77 /* Parse.swift */,
+				B65D82262789C6D100BBCDB1 /* Runner.swift */,
+				B65D82242789BB5F00BBCDB1 /* Commander.swift */,
+				B6197DF62789CE64000DEE77 /* Parser.swift */,
 				B6666B44278A3A7B0048AA81 /* Painter.swift */,
+				B625EE44278CC25D00A4EBB0 /* DependencyContainer.swift */,
 			);
 			path = "xcode-colorful-log";
 			sourceTree = "<group>";
@@ -171,15 +174,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B65D82272789C6D100BBCDB1 /* Run.swift in Sources */,
-				B6197DF72789CE64000DEE77 /* Parse.swift in Sources */,
+				B65D82272789C6D100BBCDB1 /* Runner.swift in Sources */,
+				B6197DF72789CE64000DEE77 /* Parser.swift in Sources */,
 				B6666B4A278A3D030048AA81 /* String.swift in Sources */,
 				B6666B47278A3C7B0048AA81 /* ANSIColor.swift in Sources */,
 				B6197DFC2789D67D000DEE77 /* LogType.swift in Sources */,
+				B625EE45278CC25D00A4EBB0 /* DependencyContainer.swift in Sources */,
 				B6666B45278A3A7B0048AA81 /* Painter.swift in Sources */,
 				B65D821C2789B13500BBCDB1 /* main.swift in Sources */,
 				B6197DFF2789D719000DEE77 /* DateCreator.swift in Sources */,
-				B65D82252789BB5F00BBCDB1 /* Command.swift in Sources */,
+				B65D82252789BB5F00BBCDB1 /* Commander.swift in Sources */,
 				B6197DFA2789D655000DEE77 /* LogEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

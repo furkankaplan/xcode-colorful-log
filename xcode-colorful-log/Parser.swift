@@ -1,5 +1,5 @@
 //
-//  Parse.swift
+//  Parser.swift
 //  xcode-colorful-log
 //
 //  Created by Furkan Kaplan on 8.01.2022.
@@ -8,26 +8,28 @@
 import Foundation
 import OSLog
 
-protocol ParseProtocol {
+protocol Parsing {
+    var delegate: ParserDelegate? { get set }
     func checkIfMultiline()
     func parse()
 }
 
-protocol ParseDelegate: AnyObject {
+protocol ParserDelegate: AnyObject {
     func parse(received log: LogEntry)
 }
 
-class Parse: ParseProtocol {
+class Parser: Parsing {
     
     private var messages: [String]
-    private var dateCreater: DateCreatorProtocol = DateCreator()
+    private var dateCreator: DateCreating
     private var filterKey: String
-    private weak var delegate: ParseDelegate?
     
-    init(messages: [String], filterKey: String, delegate: ParseDelegate) {
+    weak var delegate: ParserDelegate?
+    
+    init(messages: [String], filterKey: String, dateCreator: DateCreating) {
         self.messages = messages
         self.filterKey = filterKey
-        self.delegate = delegate
+        self.dateCreator = dateCreator
     }
     
     func checkIfMultiline() {
@@ -47,7 +49,7 @@ class Parse: ParseProtocol {
             guard let ttl = Int(splitted[6]) else { return }
             
             let model = LogEntry(
-                date: dateCreater.createFrom("\(splitted[0]) \(splitted[1])"),
+                date: dateCreator.createFrom("\(splitted[0]) \(splitted[1])"),
                 thread: splitted[2],
                 type: logType,
                 activity: splitted[4],
@@ -64,7 +66,7 @@ class Parse: ParseProtocol {
         
 }
 
-extension Parse {
+extension Parser {
     
     private func type(of string: String) -> LogType? {
         switch string {

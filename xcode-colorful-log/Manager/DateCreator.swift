@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol DateCreatorProtocol {
+protocol DateCreating {
     func createFrom(_ string: String) -> Date
     func createFrom(_ date: Date) -> String
 }
 
-class DateCreator: DateCreatorProtocol {
+class DateCreator: DateCreating {
     
     private var dateFormatter: DateFormatter {
         let dateFormatter = DateFormatter()

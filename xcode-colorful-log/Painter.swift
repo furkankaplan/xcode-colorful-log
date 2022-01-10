@@ -7,17 +7,18 @@
 
 import Foundation
 
-protocol PainterProtocol {
+protocol Painting {
     func printLog()
 }
 
-class Painter: PainterProtocol {
+class Painter: Painting {
     
     private let log: LogEntry
-    private let dateCreater: DateCreatorProtocol = DateCreator()
+    private let dateCreator: DateCreating
     
-    init(log: LogEntry) {
+    init(log: LogEntry, dateCreator: DateCreating) {
         self.log = log
+        self.dateCreator = dateCreator
     }
     
     func printLog() {
@@ -33,7 +34,7 @@ class Painter: PainterProtocol {
         var message: String = ""
         
         message.append("[")
-        message.append(dateCreater.createFrom(log.date))
+        message.append(dateCreator.createFrom(log.date))
         message.append("]")
     
         message.append(log.message.escape)
