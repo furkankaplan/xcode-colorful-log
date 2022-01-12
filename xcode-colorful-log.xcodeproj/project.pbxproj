@@ -11,6 +11,7 @@
 		B6197DFA2789D655000DEE77 /* LogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6197DF92789D655000DEE77 /* LogEntry.swift */; };
 		B6197DFC2789D67D000DEE77 /* LogType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6197DFB2789D67D000DEE77 /* LogType.swift */; };
 		B6197DFF2789D719000DEE77 /* DateCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6197DFE2789D719000DEE77 /* DateCreator.swift */; };
+		B624F9A4278F6CCA004D186B /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = B624F9A3278F6CCA004D186B /* ArgumentParser */; };
 		B625EE45278CC25D00A4EBB0 /* DependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B625EE44278CC25D00A4EBB0 /* DependencyContainer.swift */; };
 		B65D821C2789B13500BBCDB1 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D821B2789B13500BBCDB1 /* main.swift */; };
 		B65D82252789BB5F00BBCDB1 /* Commander.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65D82242789BB5F00BBCDB1 /* Commander.swift */; };
@@ -52,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B624F9A4278F6CCA004D186B /* ArgumentParser in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +134,9 @@
 			dependencies = (
 			);
 			name = "xcode-colorful-log";
+			packageProductDependencies = (
+				B624F9A3278F6CCA004D186B /* ArgumentParser */,
+			);
 			productName = "xcode-colorful-log";
 			productReference = B65D82182789B13500BBCDB1 /* xcode-colorful-log */;
 			productType = "com.apple.product-type.tool";
@@ -160,6 +165,9 @@
 				Base,
 			);
 			mainGroup = B65D820F2789B13500BBCDB1;
+			packageReferences = (
+				B624F9A2278F6CCA004D186B /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			productRefGroup = B65D82192789B13500BBCDB1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -346,6 +354,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B624F9A2278F6CCA004D186B /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B624F9A3278F6CCA004D186B /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B624F9A2278F6CCA004D186B /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B65D82102789B13500BBCDB1 /* Project object */;
 }
