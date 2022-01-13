@@ -37,7 +37,7 @@ class Painter: Painting {
         message.append(dateCreator.createFrom(log.date))
         message.append("]")
     
-        message.append(log.message.escape)
+        message.append(log.message)
         
         print(message.with(color: color))
     }
