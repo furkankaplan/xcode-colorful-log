@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B614AD9F2790C56F00778310 /* Logify.swift in Sources */ = {isa = PBXBuildFile; fileRef = B614AD9E2790C56F00778310 /* Logify.swift */; };
 		B6197DF72789CE64000DEE77 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6197DF62789CE64000DEE77 /* Parser.swift */; };
 		B6197DFA2789D655000DEE77 /* LogEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6197DF92789D655000DEE77 /* LogEntry.swift */; };
 		B6197DFC2789D67D000DEE77 /* LogType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6197DFB2789D67D000DEE77 /* LogType.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B614AD9E2790C56F00778310 /* Logify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logify.swift; sourceTree = "<group>"; };
 		B6197DF62789CE64000DEE77 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		B6197DF92789D655000DEE77 /* LogEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogEntry.swift; sourceTree = "<group>"; };
 		B6197DFB2789D67D000DEE77 /* LogType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogType.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				B6666B48278A3CF40048AA81 /* Extension */,
 				B6197DFD2789D6FD000DEE77 /* Manager */,
 				B6197DF82789D63E000DEE77 /* Model */,
+				B614AD9E2790C56F00778310 /* Logify.swift */,
 				B65D82262789C6D100BBCDB1 /* Runner.swift */,
 				B65D82242789BB5F00BBCDB1 /* Commander.swift */,
 				B6197DF62789CE64000DEE77 /* Parser.swift */,
@@ -194,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B65D82272789C6D100BBCDB1 /* Runner.swift in Sources */,
+				B614AD9F2790C56F00778310 /* Logify.swift in Sources */,
 				B6197DF72789CE64000DEE77 /* Parser.swift in Sources */,
 				B6666B4A278A3D030048AA81 /* String.swift in Sources */,
 				B6666B47278A3C7B0048AA81 /* ANSIColor.swift in Sources */,
