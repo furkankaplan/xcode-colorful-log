@@ -19,6 +19,7 @@
 		B6666B45278A3A7B0048AA81 /* Painter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6666B44278A3A7B0048AA81 /* Painter.swift */; };
 		B6666B47278A3C7B0048AA81 /* ANSIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6666B46278A3C7B0048AA81 /* ANSIColor.swift */; };
 		B6666B4A278A3D030048AA81 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6666B49278A3D030048AA81 /* String.swift */; };
+		B6F0FBC62790B03D0022250F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6F0FBC52790B03C0022250F /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,7 @@
 		B6666B44278A3A7B0048AA81 /* Painter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painter.swift; sourceTree = "<group>"; };
 		B6666B46278A3C7B0048AA81 /* ANSIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ANSIColor.swift; sourceTree = "<group>"; };
 		B6666B49278A3D030048AA81 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		B6F0FBC52790B03C0022250F /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				B65D821B2789B13500BBCDB1 /* main.swift */,
+				B6F0FBC42790B0000022250F /* Source */,
 				B6666B48278A3CF40048AA81 /* Extension */,
 				B6197DFD2789D6FD000DEE77 /* Manager */,
 				B6197DF82789D63E000DEE77 /* Model */,
@@ -116,6 +119,14 @@
 				B6666B49278A3D030048AA81 /* String.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		B6F0FBC42790B0000022250F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B6F0FBC52790B03C0022250F /* StringExtension.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +201,7 @@
 				B625EE45278CC25D00A4EBB0 /* DependencyContainer.swift in Sources */,
 				B6666B45278A3A7B0048AA81 /* Painter.swift in Sources */,
 				B65D821C2789B13500BBCDB1 /* main.swift in Sources */,
+				B6F0FBC62790B03D0022250F /* StringExtension.swift in Sources */,
 				B6197DFF2789D719000DEE77 /* DateCreator.swift in Sources */,
 				B65D82252789BB5F00BBCDB1 /* Commander.swift in Sources */,
 				B6197DFA2789D655000DEE77 /* LogEntry.swift in Sources */,
