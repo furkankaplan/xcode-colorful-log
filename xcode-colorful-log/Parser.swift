@@ -33,12 +33,12 @@ class Parser: Parsing {
     }
     
     func checkIfMultiline() {
-        self.messages = messages.first?.split(separator: "\n").compactMap { String($0) }.filter { $0.contains(self.filterKey) } ?? []
+        self.messages = messages.first?.split(separator: "\n").compactMap { String($0).escape }.filter { $0.contains(self.filterKey) } ?? []
     }
     
     func parse() {
         for message in messages {
-            let splitted = message.split(separator: " ").map { String($0) }
+            let splitted = message.split(separator: " ", maxSplits: 9).map { String($0) }
             
             guard splitted.count == 10 else { return }
             

@@ -30,7 +30,8 @@ class Runner: Running {
 extension Runner: CommanderDelegate {
     
     func command(_ message: String) {
-        let parser: Parsing = self.injector.parser(message)
+        var parser: Parsing = self.injector.parser(message)
+        parser.delegate = self
         parser.checkIfMultiline()
         parser.parse()
     }

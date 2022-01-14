@@ -14,7 +14,7 @@ extension String {
     }
     
     var escape: String {
-        return self.replacingOccurrences(of: "@new-line@", with: "\n").replacingOccurrences(of: "@space@", with: " ")
+        return self.replacingOccurrences(of: "@new-line@", with: "\n")
     }
     
 }
