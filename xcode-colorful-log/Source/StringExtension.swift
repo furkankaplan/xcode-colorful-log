@@ -11,6 +11,6 @@ import Foundation
 /// Because of that, encoding is required to parse logs correctly.
 extension String {
     
-    var encode: String { self.replacingOccurrences(of: "\n", with: "@new-line@") }
+    var newLineEscaping: String { self.replacingOccurrences(of: "\n", with: "@new-line@") }
     
 }
