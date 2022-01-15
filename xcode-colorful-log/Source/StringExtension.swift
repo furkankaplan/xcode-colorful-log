@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// Logs collected by the system is not completely in the regular format. It's not line by line all the time.
+/// Logs collected by the system are not completely in the regular format. It's not line by line all the time.
 /// Because of that, encoding is required to parse logs correctly.
 extension String {
     
